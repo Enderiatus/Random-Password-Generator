@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Password Generator</h1>
+    <div class="container">
+        <div class="wrapper">
+            
+            <div class="generated-password">
+                <span id="password">? ? ? ? ? ?</span>
+                <span id="copy" onclick="copyPassword()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="32" height="32" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <rect x="8" y="8" width="12" height="12" rx="2"></rect>
+                    <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path>
+                 </svg></span>
+            </div>
+            <div class="password-settings">
+                <div class="password-length">
+                    <div class="password-length-range">
+                        <label class="length">Şifre Uzunluğu</label>
+                        <span id="passLength">0</span>
+                    </div>
+                    <input type="range" min="1" max="16" step="1" class="slider" oninput="sliderChangeInput()">
+                </div>
+                
+                <div class="password-setting-boxs">
+                    <label id="settings-message">Şifre Ayarları</label>
+                    <ul class="settings">
+                        <li>
+                            <input type="checkbox" id="upper" >
+                            <label for="upper">Büyük harfleri dahil et (A-Z)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="lower">
+                            <label for="lower">Küçük harfleri dahil et (a-z)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="number">
+                            <label for="number">Sayıları dahil et (0-9)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="symbols">
+                            <label for="symbols">Sembolleri dahil et ($&/-+)</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        <div class="password-security">
+            <h3>Şifre Gücü</h3>
+            <ul id="pass-power">
+                <li class="power"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square" width="32" height="32" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                 </svg></li>
+                 <li class="power"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square" width="32" height="32" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                 </svg></li>
+                 <li class="power"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square" width="32" height="32" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                 </svg></li>
+                 <li class="power"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square" width="32" height="32" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                 </svg></li>
+            </ul>
+        </div>
+        <div class="generate-button" onclick="generatePassword()">OLUŞTUR<div>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
