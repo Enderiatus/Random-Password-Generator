@@ -3,7 +3,7 @@ const chars = {
     upper:"ABCDEFGHIJKLMNOPRSTUVYZWQ",
     lower:"abcdefghijklmnoprstuvyzwq",
     number : "0123456789",
-    symbols: "!^+%&/?*-_<>#$="
+    symbols: "!^+%&/?*-_<>#$=."
 }
 
 let slider = document.getElementsByClassName('slider')[0];
